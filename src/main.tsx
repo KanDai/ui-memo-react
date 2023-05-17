@@ -1,24 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { DisableButton } from "./pages/disable-button";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { router } from './router'
+import { RouterProvider } from 'react-router-dom'
+// import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/disable-button",
-    element: <DisableButton />,
-  },
-]);
-
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
+)
