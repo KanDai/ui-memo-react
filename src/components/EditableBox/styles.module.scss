@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.textAreaWrapper {
+    width: 300px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 1rem;
+}
+
+.selected {
+    border-color: aqua;
+}
+
+.textarea {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.textarea:focus {
+    outline: none;
+    // border-color: aqua;
+}
+
+.text {
+    width: 100%;
+    min-height: 50px;
+}
+
+.placeholder {
+    color: #ccc;
+}

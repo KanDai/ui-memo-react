@@ -15,6 +15,9 @@ function App() {
                 <li>
                     <Link to="/side-panel">サイドパネル</Link>
                 </li>
+                <li>
+                    <Link to="/editable-box">編集可能なボックス</Link>
+                </li>
             </ul>
         </div>
     )

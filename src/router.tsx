@@ -1,7 +1,8 @@
+import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import { DisableButtonPattern } from './pages/DisableButtonPattern'
-import { SidePanelPage } from './pages/SidePanel'
-import { createBrowserRouter } from 'react-router-dom'
+import { SidePanelPage } from './pages/SidePanelPage'
+import { EditableBoxPage } from './pages/EditableBoxPage'
 
 export const router = createBrowserRouter([
     {
@@ -15,5 +16,9 @@ export const router = createBrowserRouter([
     {
         path: '/side-panel',
         element: <SidePanelPage />,
+    },
+    {
+        path: '/editable-box',
+        element: <EditableBoxPage />,
     },
 ])
