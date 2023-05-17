@@ -1,0 +1,38 @@
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.panel {
+    background: #ddd;
+    height: 100%;
+    padding: 24px;
+    width: clamp(var(--min), var(--width), var(--max));
+}
+
+.handle {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 100%;
+
+    &:hover {
+        cursor: col-resize;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 2px;
+        width: 4px;
+        height: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s 0.2s;
+    }
+
+    &:hover::before {
+        background-color: aqua;
+    }
+}

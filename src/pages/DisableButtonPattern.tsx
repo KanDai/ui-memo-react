@@ -2,7 +2,11 @@ import { Button } from 'src/components/Button'
 
 export const DisableButtonPattern = () => {
     return (
-        <div>
+        <div
+            style={{
+                padding: '48px',
+            }}
+        >
             <div>
                 <p>通常のボタン</p>
                 <Button theme="primary" onClick={() => console.log('click')}>

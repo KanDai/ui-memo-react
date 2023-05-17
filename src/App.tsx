@@ -12,6 +12,9 @@ function App() {
                         非活性ボタンのパターン
                     </Link>
                 </li>
+                <li>
+                    <Link to="/side-panel">サイドパネル</Link>
+                </li>
             </ul>
         </div>
     )
