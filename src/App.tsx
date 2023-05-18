@@ -13,6 +13,12 @@ function App() {
                     </Link>
                 </li>
                 <li>
+                    <Link to="/button-when-loading">通信時のボタン</Link>
+                </li>
+                <li>
+                    <Link to="/select-menu">セレクトメニュー</Link>
+                </li>
+                <li>
                     <Link to="/side-panel">サイドパネル</Link>
                 </li>
                 <li>

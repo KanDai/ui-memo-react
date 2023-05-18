@@ -1,0 +1,30 @@
+.wrapper {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+.menu li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu button {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 16px;
+}
