@@ -10,7 +10,6 @@ export const EditableBox = ({}: Props) => {
     const [isSelected, setIsSelected] = useState(false)
     const [isEditable, setIsEditable] = useState(false)
     const [composing, setComposition] = useState(false)
-
     const [value, setValue] = useState('')
 
     const resize = () => {
@@ -84,7 +83,7 @@ export const EditableBox = ({}: Props) => {
                 )}
             </div>
             {isSelected && !isEditable && (
-                <Button onClick={() => setIsEditable(true)}>編集する</Button>
+                <Button onClick={() => setIsEditable(true)}>編集</Button>
             )}
             {isSelected && isEditable && (
                 <Button

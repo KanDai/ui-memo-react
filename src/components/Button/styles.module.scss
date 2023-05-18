@@ -8,6 +8,11 @@
     background: #ddd;
 }
 
+.button[data-theme='primary'] {
+    background-color: black;
+    color: #fff;
+}
+
 .button[data-status='disabled'] {
     opacity: 0.6;
     pointer-events: none;
