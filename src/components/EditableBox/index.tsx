@@ -1,7 +1,8 @@
 import clsx from 'clsx'
 import styles from './styles.module.scss'
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
+import { useOutsideClick } from 'src/hooks/useOutsideClick'
 
 type Props = {}
 
@@ -25,6 +26,11 @@ export const EditableBox = ({}: Props) => {
         textarea.current.style.height = `${scrollHeight}px`
     }
 
+    const submit = () => {
+        setIsSelected(false)
+        setIsEditable(false)
+    }
+
     const onKeyDown = useCallback(
         (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
             if (event.key == 'Enter') {
@@ -32,15 +38,18 @@ export const EditableBox = ({}: Props) => {
                 if (composing) {
                     return
                 }
-                setIsSelected(false)
-                setIsEditable(false)
+                submit()
             }
         },
         [composing]
     )
 
+    const wrapper = useOutsideClick(() => {
+        submit()
+    })
+
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={wrapper}>
             <div
                 className={clsx(
                     styles.textAreaWrapper,
@@ -85,16 +94,7 @@ export const EditableBox = ({}: Props) => {
             {isSelected && !isEditable && (
                 <Button onClick={() => setIsEditable(true)}>編集</Button>
             )}
-            {isSelected && isEditable && (
-                <Button
-                    onClick={() => {
-                        setIsEditable(false)
-                        setIsSelected(false)
-                    }}
-                >
-                    更新
-                </Button>
-            )}
+            {isSelected && isEditable && <Button onClick={submit}>更新</Button>}
         </div>
     )
 }
