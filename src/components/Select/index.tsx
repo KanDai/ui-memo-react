@@ -8,7 +8,7 @@ export const Select = () => {
     const [isShowMenu, setIsShowMenu] = useState(false)
     const input = useRef<HTMLInputElement>(null)
     const menu = useRef<HTMLUListElement>(null)
-    const wrapper = useOutsideClick(() => {
+    const wrapper = useOutsideClick<HTMLDivElement>(() => {
         setIsShowMenu(false)
     })
 

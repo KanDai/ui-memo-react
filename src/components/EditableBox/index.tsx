@@ -44,7 +44,7 @@ export const EditableBox = ({}: Props) => {
         [composing]
     )
 
-    const wrapper = useOutsideClick(() => {
+    const wrapper = useOutsideClick<HTMLDivElement>(() => {
         submit()
     })
 
